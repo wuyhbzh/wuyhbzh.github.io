@@ -5,17 +5,17 @@
   
   <title>跨域 | Hexo1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719">
+  <meta name="description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域">
 <meta property="og:url" content="http://yoursite.com/2018/03/09/跨域/index.html">
 <meta property="og:site_name" content="Hexo1">
-<meta property="og:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719">
+<meta property="og:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-09T05:58:40.633Z">
+<meta property="og:updated_time" content="2018-03-16T08:03:09.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719">
+<meta name="twitter:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
   
     <link rel="alternative" href="/atom.xml" title="Hexo1" type="application/atom+xml">
   
@@ -54,7 +54,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://www.cnblogs.com/renjing/p/6394725.html" target="_blank" rel="noopener">https://www.cnblogs.com/renjing/p/6394725.html</a><br><a href="https://www.cnblogs.com/bninp/p/5694277.html" target="_blank" rel="noopener">https://www.cnblogs.com/bninp/p/5694277.html</a><br><a href="http://blog.51cto.com/ixdba/1928719" target="_blank" rel="noopener">http://blog.51cto.com/ixdba/1928719</a></p>
+<pre><code>server {
+    listen       9001;
+    server_name  localhost;
 
+    location / {
+        root   ../;
+        index  index.html index.htm;
+    }
+
+  # 访问127.0.0.1:9001/api/testdir
+  # 代理成 http://otherweb.com/testdir
+      location /api/{
+            proxy_pass http://otherweb.com/;
+            proxy_cookie_path / /api;
+        }
+
+}
+</code></pre>
       
 
       

@@ -52,7 +52,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://www.cnblogs.com/renjing/p/6394725.html" target="_blank" rel="noopener">https://www.cnblogs.com/renjing/p/6394725.html</a><br><a href="https://www.cnblogs.com/bninp/p/5694277.html" target="_blank" rel="noopener">https://www.cnblogs.com/bninp/p/5694277.html</a><br><a href="http://blog.51cto.com/ixdba/1928719" target="_blank" rel="noopener">http://blog.51cto.com/ixdba/1928719</a></p>
+<pre><code>server {
+    listen       9001;
+    server_name  localhost;
 
+    location / {
+        root   ../;
+        index  index.html index.htm;
+    }
+
+  # 访问127.0.0.1:9001/api/testdir
+  # 代理成 http://otherweb.com/testdir
+      location /api/{
+            proxy_pass http://otherweb.com/;
+            proxy_cookie_path / /api;
+        }
+
+}
+</code></pre>
       
 
       
