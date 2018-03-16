@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>跨域 | Hexo1</title>
+  <title>webSocket | Hexo1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
+  <meta name="description" content="理解websocket和socket.iohttp://blog.csdn.net/while0/article/details/53930116">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域">
-<meta property="og:url" content="http://yoursite.com/2018/03/09/跨域/index.html">
+<meta property="og:title" content="webSocket">
+<meta property="og:url" content="http://yoursite.com/2018/03/16/webSocket/index.html">
 <meta property="og:site_name" content="Hexo1">
-<meta property="og:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
+<meta property="og:description" content="理解websocket和socket.iohttp://blog.csdn.net/while0/article/details/53930116">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-16T08:03:09.892Z">
+<meta property="og:updated_time" content="2018-03-16T09:59:03.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="https://www.cnblogs.com/renjing/p/6394725.htmlhttps://www.cnblogs.com/bninp/p/5694277.htmlhttp://blog.51cto.com/ixdba/1928719 server {     listen       9001;     server_name  localhost;      location">
+<meta name="twitter:title" content="webSocket">
+<meta name="twitter:description" content="理解websocket和socket.iohttp://blog.csdn.net/while0/article/details/53930116">
   
     <link rel="alternative" href="/atom.xml" title="Hexo1" type="application/atom+xml">
   
@@ -31,7 +31,7 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-跨域" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-webSocket" class="article article-type-post" itemscope itemprop="blogPost">
   
   <div class="article-inner">
     
@@ -39,39 +39,22 @@
         
   
     <h1 class="article-title" itemprop="name">
-      跨域
+      webSocket
     </h1>
   
 
       </header>
     
     <div class="article-meta">
-      <a href="/2018/03/09/跨域/" class="article-date">
-  <time datetime="2018-03-09T05:58:06.000Z" itemprop="datePublished">2018-03-09</time>
+      <a href="/2018/03/16/webSocket/" class="article-date">
+  <time datetime="2018-03-16T09:58:58.000Z" itemprop="datePublished">2018-03-16</time>
 </a>
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://www.cnblogs.com/renjing/p/6394725.html" target="_blank" rel="noopener">https://www.cnblogs.com/renjing/p/6394725.html</a><br><a href="https://www.cnblogs.com/bninp/p/5694277.html" target="_blank" rel="noopener">https://www.cnblogs.com/bninp/p/5694277.html</a><br><a href="http://blog.51cto.com/ixdba/1928719" target="_blank" rel="noopener">http://blog.51cto.com/ixdba/1928719</a></p>
-<pre><code>server {
-    listen       9001;
-    server_name  localhost;
+        <p>理解websocket和socket.io<br><a href="http://blog.csdn.net/while0/article/details/53930116" target="_blank" rel="noopener">http://blog.csdn.net/while0/article/details/53930116</a></p>
 
-    location / {
-        root   ../;
-        index  index.html index.htm;
-    }
-
-  # 访问127.0.0.1:9001/api/testdir
-  # 代理成 http://otherweb.com/testdir
-      location /api/{
-            proxy_pass http://otherweb.com/;
-            proxy_cookie_path / /api;
-        }
-
-}
-</code></pre>
       
 
       
@@ -82,19 +65,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/16/webSocket/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          webSocket
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/06/ln-db/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/09/跨域/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ln.db</div>
+      <div class="article-nav-title">跨域</div>
     </a>
   
 </nav>
