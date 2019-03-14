@@ -29,6 +29,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-跨域" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/跨域/">跨域</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/03/09/跨域/" class="article-date">
+  <time datetime="2018-03-09T05:58:06.000Z" itemprop="datePublished">2018-03-09</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.cnblogs.com/renjing/p/6394725.html" target="_blank" rel="noopener">https://www.cnblogs.com/renjing/p/6394725.html</a><br><a href="https://www.cnblogs.com/bninp/p/5694277.html" target="_blank" rel="noopener">https://www.cnblogs.com/bninp/p/5694277.html</a><br><a href="http://blog.51cto.com/ixdba/1928719" target="_blank" rel="noopener">http://blog.51cto.com/ixdba/1928719</a><br><a href="https://blog.csdn.net/G_eorge/article/details/69228400?locationNum=8&amp;fps=1" target="_blank" rel="noopener">https://blog.csdn.net/G_eorge/article/details/69228400?locationNum=8&amp;fps=1</a></p>
+<p>配置nginx <a href="https://blog.csdn.net/kkgbn/article/details/52276866" target="_blank" rel="noopener">https://blog.csdn.net/kkgbn/article/details/52276866</a></p>
+<pre><code>server {
+    listen       9001;
+    server_name  localhost;
+
+    location / {
+        root   ../;
+        index  index.html index.htm;
+    }
+
+  # 访问127.0.0.1:9001/api/testdir
+  # 代理成 http://otherweb.com/testdir
+      location /api/{
+            proxy_pass http://otherweb.com/;
+            proxy_cookie_path / /api;
+        }
+
+}
+</code></pre>
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-ln-db" class="article article-type-post" itemscope itemprop="blogPost">
   
   <div class="article-inner">
