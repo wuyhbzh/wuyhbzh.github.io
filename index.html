@@ -52,6 +52,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://wheatup.itch.io/golf" target="_blank" rel="noopener">https://wheatup.itch.io/golf</a><br><a href="https://forum.cocos.com/t/cocos-creator-2d-3d/76094" target="_blank" rel="noopener">https://forum.cocos.com/t/cocos-creator-2d-3d/76094</a></p>
+<p>creator 竖屏 横屏 切换<br>setLandscape() {<br>    if (cc.sys.isNative &amp;&amp; cc.sys.os === cc.sys.OS_ANDROID) {<br>        jsb.reflection.callStaticMethod(“org/cocos2dx/javascript/AppActivity”,<br>        “changeOrientation”, “(I)V”, 0); //0横1竖<br>    }else if (cc.sys.isNative &amp;&amp; cc.sys.os === cc.sys.OS_IOS) {<br>        jsb.reflection.callStaticMethod(“IOSHelper”, “changeOrientation:”, 0);<br>    }else {<br>        cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE);<br>    }<br>    let width = cc.view.getFrameSize().height &lt; cc.view.getFrameSize().width ?<br>    cc.view.getFrameSize().width : cc.view.getFrameSize().height;<br>    let height = cc.view.getFrameSize().height &gt; cc.view.getFrameSize().width ?<br>    cc.view.getFrameSize().width : cc.view.getFrameSize().height;<br>    cc.view.setFrameSize(width, height);<br>    cc.view.setDesignResolutionSize(width, height, cc.ResolutionPolicy.FIXED_WIDTH);</p>
+<h2 id=""><a href="#" class="headerlink" title="},"></a>},</h2><p>作者：爱睡觉的猫L<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/haibo19981/article/details/81237411" target="_blank" rel="noopener">https://blog.csdn.net/haibo19981/article/details/81237411</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
 

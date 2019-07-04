@@ -5,17 +5,17 @@
   
   <title>creator demo | Hexo1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094">
+  <meta name="description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094 creator 竖屏 横屏 切换setLandscape() {    if (cc.sys.isNative &amp;amp;&amp;amp; cc.sys.os === cc.sys.OS_ANDROID) {        jsb.reflect">
 <meta property="og:type" content="article">
 <meta property="og:title" content="creator demo">
 <meta property="og:url" content="http://yoursite.com/2019/06/05/creator-demo/index.html">
 <meta property="og:site_name" content="Hexo1">
-<meta property="og:description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094">
+<meta property="og:description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094 creator 竖屏 横屏 切换setLandscape() {    if (cc.sys.isNative &amp;amp;&amp;amp; cc.sys.os === cc.sys.OS_ANDROID) {        jsb.reflect">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-05T08:06:43.658Z">
+<meta property="og:updated_time" content="2019-07-04T07:16:10.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="creator demo">
-<meta name="twitter:description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094">
+<meta name="twitter:description" content="https://wheatup.itch.io/golfhttps://forum.cocos.com/t/cocos-creator-2d-3d/76094 creator 竖屏 横屏 切换setLandscape() {    if (cc.sys.isNative &amp;amp;&amp;amp; cc.sys.os === cc.sys.OS_ANDROID) {        jsb.reflect">
   
     <link rel="alternative" href="/atom.xml" title="Hexo1" type="application/atom+xml">
   
@@ -54,6 +54,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://wheatup.itch.io/golf" target="_blank" rel="noopener">https://wheatup.itch.io/golf</a><br><a href="https://forum.cocos.com/t/cocos-creator-2d-3d/76094" target="_blank" rel="noopener">https://forum.cocos.com/t/cocos-creator-2d-3d/76094</a></p>
+<p>creator 竖屏 横屏 切换<br>setLandscape() {<br>    if (cc.sys.isNative &amp;&amp; cc.sys.os === cc.sys.OS_ANDROID) {<br>        jsb.reflection.callStaticMethod(“org/cocos2dx/javascript/AppActivity”,<br>        “changeOrientation”, “(I)V”, 0); //0横1竖<br>    }else if (cc.sys.isNative &amp;&amp; cc.sys.os === cc.sys.OS_IOS) {<br>        jsb.reflection.callStaticMethod(“IOSHelper”, “changeOrientation:”, 0);<br>    }else {<br>        cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE);<br>    }<br>    let width = cc.view.getFrameSize().height &lt; cc.view.getFrameSize().width ?<br>    cc.view.getFrameSize().width : cc.view.getFrameSize().height;<br>    let height = cc.view.getFrameSize().height &gt; cc.view.getFrameSize().width ?<br>    cc.view.getFrameSize().width : cc.view.getFrameSize().height;<br>    cc.view.setFrameSize(width, height);<br>    cc.view.setDesignResolutionSize(width, height, cc.ResolutionPolicy.FIXED_WIDTH);</p>
+<h2 id=""><a href="#" class="headerlink" title="},"></a>},</h2><p>作者：爱睡觉的猫L<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/haibo19981/article/details/81237411" target="_blank" rel="noopener">https://blog.csdn.net/haibo19981/article/details/81237411</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
 
