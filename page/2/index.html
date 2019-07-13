@@ -29,6 +29,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-cocos-js-工具函数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/03/cocos-js-工具函数/">cocos-js 工具函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/04/03/cocos-js-工具函数/" class="article-date">
+  <time datetime="2018-04-03T07:22:49.000Z" itemprop="datePublished">2018-04-03</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.cnblogs.com/kefeiGame/p/8335553.html" target="_blank" rel="noopener">https://www.cnblogs.com/kefeiGame/p/8335553.html</a></p>
+<p>1、获取URL中的请求参数的值—-此方法接收参数名</p>
+<p>function getQueryString(name) {<br>    var reg = new RegExp(“(^|&amp;)” + name + “=([^&amp;]*)(&amp;|$)”, “i”);<br>    var r = window.location.search.substr(1).match(reg);<br>    if (r != null) return decodeURIComponent(r[2]);<br>    return null;<br>};</p>
+<p>3、远程图片加载<br>loadImgFromUrl: function (target, imgUrl, p, tag) {<br>        if(!imgUrl)return;<br>        var self = target;<br>        var loadCb = function(err, img){<br>            cc.textureCache.addImage(imgUrl);<br>            var texture2d = new cc.Texture2D();<br>            texture2d.initWithElement(img);<br>            texture2d.handleLoadedTexture();<br>            var sp = new cc.Sprite();<br>            sp.initWithTexture(texture2d);<br>            self.addChild(sp);<br>            sp.x = p.x;<br>            sp.y = p.y;<br>            sp.tag = tag;<br>        };<br>        cc.loader.loadImg(imgUrl, {isCrossOrigin : false }, loadCb);<br>    },</p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-webSocket" class="article article-type-post" itemscope itemprop="blogPost">
   
   <div class="article-inner">
